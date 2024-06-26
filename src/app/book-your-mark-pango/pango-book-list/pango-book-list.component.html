@@ -1,0 +1,79 @@
+<!--  Logo Section -->
+<div class="logo-section">
+    <svg width="56" height="65" viewBox="0 0 56 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="27.9375" width="8.27243" height="21.5661" rx="4.13621" fill="#4B10A0"/>
+        <rect x="47.2393" y="27.9375" width="8.27243" height="21.5661" rx="4.13621" fill="#4B10A0"/>
+        <rect x="6.63965" y="25.2148" width="7.40164" height="27.0121" rx="3.70082" fill="#4B10A0"/>
+        <rect x="41.2529" y="25.2148" width="7.40164" height="27.0121" rx="3.70082" fill="#4B10A0"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.8305 1.52488C18.8561 1.52488 13.0155 6.36469 8.7839 12.3143C7.47726 14.1515 6.55973 16.447 5.96032 18.6059C5.36308 20.7569 5.09654 22.7178 5.06098 23.865V29.6806H3.53711V23.842L3.53745 23.8307C3.57584 22.5438 3.86542 20.4546 4.49207 18.1977C5.1185 15.9415 6.09673 13.4627 7.54237 11.4301C11.9097 5.28972 18.1512 0 26.8305 0C35.3958 0 44.2032 4.69117 48.2738 11.48C51.4863 16.8378 52.0288 20.788 52.0288 23.8534V29.6806H50.5049V23.8534C50.5049 21.0372 50.0242 17.363 46.9671 12.2645C43.2006 5.98296 34.9189 1.52488 26.8305 1.52488Z" fill="#4B10A0"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M45.8434 51.6442C43.2058 59.8399 35.1958 61.385 31.5732 61.1573L31.6688 59.6354C34.9762 59.8433 42.067 58.404 44.3929 51.1768L45.8434 51.6442Z" fill="#4B10A0"/>
+        <rect x="21.6611" y="56.0391" width="10.6671" height="8.8225" rx="4.41125" fill="#4B10A0"/>
+    </svg>
+    <p id="text1"> Get In Touch!</p>
+    <p id="text2">Bake Your Mark With Pango</p>
+</div>
+<!-- Logo Section Ends  -->
+
+<!-- Form Section -->
+<div>
+    <div class="form-section">
+        <form class="left" #registerForm="ngForm" (ngSubmit)="submitForm(registerForm)">
+            <div class="label-input-section">
+                <h4>Name</h4>
+                <input type="text" placeholder="Your Name is"  name="name" [(ngModel)]="form.name" required> 
+                <hr>
+                <p style="color:red;" *ngIf="registerForm.controls['name']?.touched && registerForm.controls['name']?.invalid">
+                    Enter a valid name!
+                </p> 
+            </div>
+            <div class="label-input-section">
+                <h4>Email</h4>
+                <input type="email" placeholder="Where can we email you" name="email" [(ngModel)]="form.email" required email>  
+                <hr>
+                <p style="color:red;" *ngIf="registerForm.controls['email']?.touched && registerForm.controls['email']?.invalid">
+                    Enter a valid email!
+                </p>
+            </div>
+            <div class="label-input-section">
+                <h4>Phone Number</h4>
+                <input type="text" placeholder="Your phone number" name="phone_no" [(ngModel)]="form.phone_no" required>  
+                <hr>
+                <p style="color:red;" *ngIf="registerForm.controls['phone_no']?.touched && registerForm.controls['phone_no']?.invalid">
+                    Enter a valid phone number!
+                </p>
+            </div>
+            <div class="label-input-section">
+                <h4>Message</h4>
+                <input type="text" id="message" placeholder="What do you want..." name="message" [(ngModel)]="form.message">               
+                <hr>
+            </div>
+            <button class="btn-submit" type="submit">Submit</button>
+        </form>
+
+    
+        <div class="right">
+            <div class="card ">
+                <svg width="25" height="30" viewBox="0 0 36 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.6395 16.2687L14.0226 19.5331C14.497 21.1805 15.1645 22.7652 16.0112 24.2538C16.8924 25.7321 17.9526 27.0946 19.1675 28.3101L23.8509 26.8583C26.4747 26.0444 29.3387 26.8803 31.083 28.9701L33.7497 32.1641C34.8294 33.4463 35.3704 35.1012 35.2583 36.7781C35.1461 38.455 34.3895 40.0223 33.1487 41.1479C28.797 45.1426 22.0977 46.4933 17.0831 42.5293C12.6758 39.0372 8.94696 34.7567 6.08393 29.9028C3.2146 25.0717 1.29479 19.7306 0.428914 14.1702C-0.531777 7.91408 4.02128 2.90746 9.69743 1.20045C13.0821 0.179769 16.6936 1.93077 17.9348 5.19519L19.3989 9.04475C20.3603 11.5789 19.6688 14.4385 17.6395 16.2687Z" fill="white"/>
+                </svg>    
+                <p>+919820840946</p>
+            </div>
+            <div class="card ">
+                <h3>Click on a Button</h3>
+            </div>
+            <div class="card ">
+                <svg width="46" height="53" viewBox="0 0 46 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M43.0073 33.3517C44.736 30.1563 45.6366 26.5905 45.6294 22.9703C45.6234 10.7559 35.5508 0.854492 23.1311 0.854492C10.7114 0.854492 0.648407 10.7559 0.654352 22.9703C0.647788 28.1874 2.52541 33.2381 5.95247 37.222L5.97894 37.2545C5.9882 37.2623 5.99614 37.2727 6.00276 37.2805H5.95249L19.3036 51.2135C19.7986 51.7299 20.3956 52.1414 21.058 52.4226C21.7205 52.7039 22.4343 52.8489 23.1557 52.8489C23.8771 52.8489 24.5909 52.7039 25.253 52.4226C25.9152 52.1414 26.5118 51.7299 27.0063 51.2135L40.3451 37.2805H40.2949L40.316 37.2558L40.3187 37.2532C40.4139 37.1413 40.509 37.0294 40.6029 36.9149C41.5199 35.8059 42.3256 34.6122 43.0087 33.3504L43.0073 33.3517ZM23.1513 31.4263C21.0463 31.4263 19.0272 30.604 17.538 29.1401C16.0489 27.6763 15.2117 25.6909 15.2107 23.6208C15.2097 21.5506 16.0449 19.5652 17.5326 18.1014C19.0204 16.6375 21.0387 15.8152 23.1437 15.8152C25.2486 15.8152 27.2678 16.6375 28.7569 18.1014C30.2461 19.5652 31.0832 21.5506 31.0842 23.6208C31.0852 25.6909 30.25 27.6763 28.7623 29.1401C27.2746 30.604 25.2562 31.4263 23.1513 31.4263Z" fill="white"/>
+                </svg>
+                <p>Mahalaxmi, Mumbai</p>
+            </div>
+            <div class="card ">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.81403 17.8937L23.9988 30.0319L43.1896 17.8937L24.0048 5.75557L4.81403 17.8937ZM47.9865 17.8937L47.9805 42.17C47.9802 43.4577 47.4745 44.6926 46.5747 45.6032C45.6749 46.5137 44.4546 47.0252 43.1824 47.0252H4.80686C3.53463 47.0252 2.31464 46.5137 1.41526 45.6032C0.515883 44.6926 0.0107969 43.4577 0.0111138 42.17L0.0170876 17.8937C0.0175237 16.1215 0.953304 14.5921 2.34463 13.7425L24.0062 0.0263672L45.661 13.7425C47.0519 14.5921 47.9869 16.1215 47.9865 17.8937Z" fill="white"/>
+                </svg>
+                <h4>azhar.ali.sayed@ pango.in</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Form Section Ends -->
